@@ -1,0 +1,1 @@
+import Link from "next/link"; export default function Footer(){return <footer className="footer"><strong>Wayfinder</strong><span>© 2025 Wayfinder Spatial Index. All rights reserved.</span><nav><Link href="/regions">Cartography</Link><Link href="/about">Data Sources</Link><Link href="/about">Privacy Policy</Link></nav></footer>}
