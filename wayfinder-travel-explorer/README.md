@@ -3,6 +3,7 @@
 A responsive travel explorer built with Next.js App Router, TypeScript, and local dummy data.
 
 ## Features
+
 - Destination catalog and region filters
 - Dynamic destination details at `/destinations/[slug]`
 - Geographic region directory at `/regions`
@@ -12,19 +13,23 @@ A responsive travel explorer built with Next.js App Router, TypeScript, and loca
 - Responsive reusable components
 
 ## Run locally
+
 ```bash
 npm install
 npm run dev
 ```
+
 Open http://localhost:3000.
 
 ## Validate
+
 ```bash
 npm run lint
 npm run build
 ```
 
 ## Routes
+
 - `/destinations`
 - `/destinations/[slug]`
 - `/regions`

@@ -1,16 +1,190 @@
-import type {Destination,Region} from "@/types";
-export const destinations:Destination[]=[
-{slug:"kyoto",name:"Kyoto",country:"Japan",countryCode:"JPN",region:"East Asia",regionSlug:"asia/japan/kansai",code:"EA-01",latitude:"35.0116° N",longitude:"135.7681° E",description:"Historic shrines, Zen gardens, bamboo groves, and traditional wooden tea houses.",knownFor:"Zen gardens, bamboo forests, Kaiseki dining, and historic preservation",bestSeason:"Spring (March–May) or autumn (October–November)",tripLength:"4 to 6 days",image:"https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85",transit:"Kyoto Station connects to the Tokaido Shinkansen. Local buses and subway lines serve the city.",tag:"Imperial Capital"},
-{slug:"bergen",name:"Bergen",country:"Norway",countryCode:"NOR",region:"Scandinavia",regionSlug:"scandinavia",code:"SC-04",latitude:"60.3913° N",longitude:"5.3221° E",description:"Coastal fjord gateway known for colorful wooden wharfs and dramatic mountain landscapes.",knownFor:"Fjords, waterfront architecture, and mountain viewpoints",bestSeason:"May–September",tripLength:"3 to 4 days",image:"https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1000&q=85",transit:"Bergen connects to Oslo by rail and has a compact light-rail and bus network.",tag:"Coastal Fjord Gateway"},
-{slug:"oaxaca",name:"Oaxaca",country:"Mexico",countryCode:"MEX",region:"Central & South America",regionSlug:"central-south-america",code:"CA-02",latitude:"17.0732° N",longitude:"96.7266° W",description:"Colonial architecture, indigenous craft markets, and renowned culinary traditions.",knownFor:"Regional cuisine, artisan markets, and historic architecture",bestSeason:"October–April",tripLength:"3 to 5 days",image:"https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=1000&q=85",transit:"The historic centre is walkable, with taxis and regional buses for nearby towns.",tag:"Cultural Centre"},
-{slug:"florence",name:"Florence",country:"Italy",countryCode:"ITA",region:"Southern Europe",regionSlug:"southern-europe",code:"SE-08",latitude:"43.7696° N",longitude:"11.2558° E",description:"Renaissance art museums, a terracotta-domed cathedral, and Tuscan food culture.",knownFor:"Renaissance art, architecture, and Tuscan cuisine",bestSeason:"April–June and September–October",tripLength:"3 to 4 days",image:"https://images.unsplash.com/photo-1543429257-4b1e4f7b3e9f?auto=format&fit=crop&w=1000&q=85",transit:"The historic centre is walkable; regional rail links Florence with major Italian cities.",tag:"Renaissance City"},
-{slug:"essaouira",name:"Essaouira",country:"Morocco",countryCode:"MAR",region:"North Africa",regionSlug:"north-africa",code:"NA-03",latitude:"31.5085° N",longitude:"9.7595° W",description:"Atlantic port ramparts, breezy medina alleyways, and artisan woodcraft.",knownFor:"Atlantic beaches, medina lanes, and seafood",bestSeason:"March–June and September–November",tripLength:"2 to 3 days",image:"https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1000&q=85",transit:"Regional buses connect Essaouira with Marrakesh and Agadir.",tag:"Atlantic Port"},
-{slug:"queenstown",name:"Queenstown",country:"New Zealand",countryCode:"NZL",region:"Oceania",regionSlug:"oceania",code:"OC-06",latitude:"45.0312° S",longitude:"168.6626° E",description:"Alpine lake landscapes, glacial valleys, and outdoor trail expeditions.",knownFor:"Adventure sports, lake views, and alpine trails",bestSeason:"December–February for summer trails",tripLength:"4 to 6 days",image:"https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1000&q=85",transit:"Local buses serve the town and airport; rental cars help explore the wider region.",tag:"Alpine Escape"}];
-export const regions:Region[]=[
-{slug:"east-asia",name:"East Asia",code:"DIV-EA",terrain:"Island arcs & basins",description:"Ancient capitals, island chains, and mountain ranges.",subregions:"Japan, South Korea, Taiwan",settlements:18,image:"https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80"},
-{slug:"southern-europe",name:"Southern Europe",code:"DIV-SE",terrain:"Karst & maritime valleys",description:"Mediterranean coastlines, historic cities, and cultural landscapes.",subregions:"Italy, Spain, Greece, Portugal",settlements:24,image:"https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80"},
-{slug:"scandinavia",name:"Scandinavia",code:"DIV-SC",terrain:"Glacial fjords & archipelagos",description:"Northern landscapes shaped by fjords, forests, and coastal settlements.",subregions:"Norway, Sweden, Denmark, Finland",settlements:12,image:"https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=900&q=80"},
-{slug:"central-south-america",name:"Central & South America",code:"DIV-CSA",terrain:"Highland plateaus & canopies",description:"Highland cities, rainforest ecosystems, and cultural diversity.",subregions:"Mexico, Peru, Colombia, Chile",settlements:16,image:"https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=900&q=80"},
-{slug:"north-africa",name:"North Africa",code:"DIV-NA",terrain:"Desert margins & Atlantic coast",description:"Historic medinas, desert gateways, and Atlantic coastal towns.",subregions:"Morocco, Tunisia, Egypt",settlements:9,image:"https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=900&q=80"},
-{slug:"oceania",name:"Oceania",code:"DIV-OC",terrain:"Alpine lakes & Pacific shores",description:"Island cultures, dramatic mountain terrain, and oceanic ecosystems.",subregions:"New Zealand, Australia, Pacific Islands",settlements:11,image:"https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=900&q=80"}];
-export const getDestination=(slug:string)=>destinations.find(x=>x.slug===slug);
+import type { Destination, Region } from "@/types";
+export const destinations: Destination[] = [
+  {
+    slug: "kyoto",
+    name: "Kyoto",
+    country: "Japan",
+    countryCode: "JPN",
+    region: "East Asia",
+    regionSlug: "asia/japan/kansai",
+    code: "EA-01",
+    latitude: "35.0116° N",
+    longitude: "135.7681° E",
+    description: "Historic shrines, Zen gardens, bamboo groves, and traditional wooden tea houses.",
+    knownFor: "Zen gardens, bamboo forests, Kaiseki dining, and historic preservation",
+    bestSeason: "Spring (March–May) or autumn (October–November)",
+    tripLength: "4 to 6 days",
+    image:
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85",
+    transit:
+      "Kyoto Station connects to the Tokaido Shinkansen. Local buses and subway lines serve the city.",
+    tag: "Imperial Capital",
+  },
+  {
+    slug: "bergen",
+    name: "Bergen",
+    country: "Norway",
+    countryCode: "NOR",
+    region: "Scandinavia",
+    regionSlug: "scandinavia",
+    code: "SC-04",
+    latitude: "60.3913° N",
+    longitude: "5.3221° E",
+    description:
+      "Coastal fjord gateway known for colorful wooden wharfs and dramatic mountain landscapes.",
+    knownFor: "Fjords, waterfront architecture, and mountain viewpoints",
+    bestSeason: "May–September",
+    tripLength: "3 to 4 days",
+    image:
+      "https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1000&q=85",
+    transit: "Bergen connects to Oslo by rail and has a compact light-rail and bus network.",
+    tag: "Coastal Fjord Gateway",
+  },
+  {
+    slug: "oaxaca",
+    name: "Oaxaca",
+    country: "Mexico",
+    countryCode: "MEX",
+    region: "Central & South America",
+    regionSlug: "central-south-america",
+    code: "CA-02",
+    latitude: "17.0732° N",
+    longitude: "96.7266° W",
+    description:
+      "Colonial architecture, indigenous craft markets, and renowned culinary traditions.",
+    knownFor: "Regional cuisine, artisan markets, and historic architecture",
+    bestSeason: "October–April",
+    tripLength: "3 to 5 days",
+    image:
+      "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=1000&q=85",
+    transit: "The historic centre is walkable, with taxis and regional buses for nearby towns.",
+    tag: "Cultural Centre",
+  },
+  {
+    slug: "florence",
+    name: "Florence",
+    country: "Italy",
+    countryCode: "ITA",
+    region: "Southern Europe",
+    regionSlug: "southern-europe",
+    code: "SE-08",
+    latitude: "43.7696° N",
+    longitude: "11.2558° E",
+    description: "Renaissance art museums, a terracotta-domed cathedral, and Tuscan food culture.",
+    knownFor: "Renaissance art, architecture, and Tuscan cuisine",
+    bestSeason: "April–June and September–October",
+    tripLength: "3 to 4 days",
+    image:
+      "https://images.unsplash.com/photo-1543429257-4b1e4f7b3e9f?auto=format&fit=crop&w=1000&q=85",
+    transit:
+      "The historic centre is walkable; regional rail links Florence with major Italian cities.",
+    tag: "Renaissance City",
+  },
+  {
+    slug: "essaouira",
+    name: "Essaouira",
+    country: "Morocco",
+    countryCode: "MAR",
+    region: "North Africa",
+    regionSlug: "north-africa",
+    code: "NA-03",
+    latitude: "31.5085° N",
+    longitude: "9.7595° W",
+    description: "Atlantic port ramparts, breezy medina alleyways, and artisan woodcraft.",
+    knownFor: "Atlantic beaches, medina lanes, and seafood",
+    bestSeason: "March–June and September–November",
+    tripLength: "2 to 3 days",
+    image:
+      "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1000&q=85",
+    transit: "Regional buses connect Essaouira with Marrakesh and Agadir.",
+    tag: "Atlantic Port",
+  },
+  {
+    slug: "queenstown",
+    name: "Queenstown",
+    country: "New Zealand",
+    countryCode: "NZL",
+    region: "Oceania",
+    regionSlug: "oceania",
+    code: "OC-06",
+    latitude: "45.0312° S",
+    longitude: "168.6626° E",
+    description: "Alpine lake landscapes, glacial valleys, and outdoor trail expeditions.",
+    knownFor: "Adventure sports, lake views, and alpine trails",
+    bestSeason: "December–February for summer trails",
+    tripLength: "4 to 6 days",
+    image:
+      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1000&q=85",
+    transit: "Local buses serve the town and airport; rental cars help explore the wider region.",
+    tag: "Alpine Escape",
+  },
+];
+export const regions: Region[] = [
+  {
+    slug: "east-asia",
+    name: "East Asia",
+    code: "DIV-EA",
+    terrain: "Island arcs & basins",
+    description: "Ancient capitals, island chains, and mountain ranges.",
+    subregions: "Japan, South Korea, Taiwan",
+    settlements: 18,
+    image:
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "southern-europe",
+    name: "Southern Europe",
+    code: "DIV-SE",
+    terrain: "Karst & maritime valleys",
+    description: "Mediterranean coastlines, historic cities, and cultural landscapes.",
+    subregions: "Italy, Spain, Greece, Portugal",
+    settlements: 24,
+    image:
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "scandinavia",
+    name: "Scandinavia",
+    code: "DIV-SC",
+    terrain: "Glacial fjords & archipelagos",
+    description: "Northern landscapes shaped by fjords, forests, and coastal settlements.",
+    subregions: "Norway, Sweden, Denmark, Finland",
+    settlements: 12,
+    image:
+      "https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "central-south-america",
+    name: "Central & South America",
+    code: "DIV-CSA",
+    terrain: "Highland plateaus & canopies",
+    description: "Highland cities, rainforest ecosystems, and cultural diversity.",
+    subregions: "Mexico, Peru, Colombia, Chile",
+    settlements: 16,
+    image:
+      "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "north-africa",
+    name: "North Africa",
+    code: "DIV-NA",
+    terrain: "Desert margins & Atlantic coast",
+    description: "Historic medinas, desert gateways, and Atlantic coastal towns.",
+    subregions: "Morocco, Tunisia, Egypt",
+    settlements: 9,
+    image:
+      "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "oceania",
+    name: "Oceania",
+    code: "DIV-OC",
+    terrain: "Alpine lakes & Pacific shores",
+    description: "Island cultures, dramatic mountain terrain, and oceanic ecosystems.",
+    subregions: "New Zealand, Australia, Pacific Islands",
+    settlements: 11,
+    image:
+      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=900&q=80",
+  },
+];
+export const getDestination = (slug: string) => destinations.find((x) => x.slug === slug);

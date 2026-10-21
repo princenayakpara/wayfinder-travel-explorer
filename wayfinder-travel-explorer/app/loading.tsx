@@ -1,1 +1,16 @@
-export default function Loading(){return <div className="container"><div className="kicker">WAYFINDER / LOADING INDEX</div><div className="grid">{[1,2,3,4,5,6].map(n=><div className="card skeleton" key={n}><div/><h2>Loading destination…</h2><p>Please wait while the local catalog is prepared.</p></div>)}</div></div>}
+export default function Loading() {
+  return (
+    <div className="container">
+      <div className="kicker">WAYFINDER / LOADING INDEX</div>
+      <div className="grid">
+        {[1, 2, 3, 4, 5, 6].map((n) => (
+          <div className="card skeleton" key={n}>
+            <div />
+            <h2>Loading destination…</h2>
+            <p>Please wait while the local catalog is prepared.</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

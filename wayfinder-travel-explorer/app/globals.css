@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
   --bg: #faf8ff;
@@ -8,9 +7,9 @@
   --teal: #08776f;
   --line: #c5d2cf;
   --lav: #f0f2ff;
-  --sans: 'DM Sans', sans-serif;
-  --mono: 'DM Mono', monospace;
-  --display: 'Manrope', sans-serif;
+  --sans: "DM Sans", sans-serif;
+  --mono: "DM Mono", monospace;
+  --display: "Manrope", sans-serif;
 }
 
 * {

@@ -1,1 +1,29 @@
-{"name":"wayfinder-travel-explorer","version":"1.0.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start","lint":"eslint ."},"dependencies":{"lucide-react":"^0.468.0","next":"15.2.4","react":"^19.0.0","react-dom":"^19.0.0"},"devDependencies":{"@eslint/eslintrc":"^3","@types/node":"^20","@types/react":"^19","@types/react-dom":"^19","eslint":"^9","eslint-config-next":"15.2.4","typescript":"^5"}}
+{
+  "name": "wayfinder-travel-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "prettier": "^3.9.10",
+    "typescript": "^5"
+  }
+}

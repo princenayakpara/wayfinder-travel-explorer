@@ -1,1 +1,101 @@
-import Link from "next/link"; import {destinations} from "@/data/catalog"; import {MapPin,TrainFront,Info} from "lucide-react"; export default function Page(){return <div className="planner"><aside className="sidebar"><b>WORKSPACE</b><h2>Field Workspace <small>v1.2</small></h2><Link className="selected" href="/planner/overview">▦　Overview</Link><Link href="/destinations">♧　Saved Places　3</Link><Link href="/about">☷　Preferences</Link><hr/><b>INDEX RESOURCES</b><Link href="/regions">▤　Documentation</Link><Link href="/destinations">←　Exit to Public Explorer</Link><div className="mesh">● Cartographic Mesh<p>Japan Rail & Regional Sub-grids active. No conflicts found.</p></div></aside><section className="planner-main"><div className="kicker">☁ Synced local index　　<Link href="/destinations">＋ New Route</Link></div><h1>Trip Overview</h1><p>Your current route draft and curated spatial bookmarks.</p><div className="planner-grid"><article className="panel"><span className="pill">Active Draft　·　8 Days Total</span><h2>Autumn in Honshu</h2><p>Dates: Oct 14–22 · 3 Destinations</p><h3>ITINERARY STOPS</h3>{["Kyoto","Osaka","Nara"].map((s,i)=><div className="stop" key={s}><i/><div><b>{s}</b><p>{["Historic ward corridors, Gion, Arashiyama bamboo path","Dotonbori food district, Namba architectural nexus","Todai-ji temple, Kasuga Taisha park preserve"][i]}</p></div><code>{["3 nights","2 nights","Day trip"][i]}</code></div>)}<hr/>Tokaido-Sanyo Main Corridor　<Link href="/destinations/kyoto">Edit Schedule →</Link></article><div><article className="panel"><h2>Saved Destination Nodes</h2><p>3 indexed locations pinned</p>{[destinations[0],destinations[1],destinations[3]].map(d=><div className="saved" key={d.slug}><MapPin/><div><b>{d.name}, {d.country}</b><code>{d.latitude}, {d.longitude}</code></div><Link href={`/destinations/${d.slug}`}>Details</Link></div>)}<Link href="/destinations">Browse Spatial Bookmarks →</Link></article><article className="panel"><h2><TrainFront size={18}/> Transit & Route Notes</h2><p>Static synthesis of transit infrastructure across regional links.</p><div className="notice">JR Kansai W. Pass　 Valid (Days 1–5)<br/>Kyoto ↔ Osaka Express　28m via Tokaido Line</div><small><Info size={14}/> Luggage forwarding may be available between terminals.</small></article></div></div><div className="notice">Spatial Topology Index: Clean　·　All geocodes are verified against local catalog definitions.</div></section></div>}
+import Link from "next/link";
+import { destinations } from "@/data/catalog";
+import { MapPin, TrainFront, Info } from "lucide-react";
+export default function Page() {
+  return (
+    <div className="planner">
+      <aside className="sidebar">
+        <b>WORKSPACE</b>
+        <h2>
+          Field Workspace <small>v1.2</small>
+        </h2>
+        <Link className="selected" href="/planner/overview">
+          ▦　Overview
+        </Link>
+        <Link href="/destinations">♧　Saved Places　3</Link>
+        <Link href="/about">☷　Preferences</Link>
+        <hr />
+        <b>INDEX RESOURCES</b>
+        <Link href="/regions">▤　Documentation</Link>
+        <Link href="/destinations">←　Exit to Public Explorer</Link>
+        <div className="mesh">
+          ● Cartographic Mesh<p>Japan Rail & Regional Sub-grids active. No conflicts found.</p>
+        </div>
+      </aside>
+      <section className="planner-main">
+        <div className="kicker">
+          ☁ Synced local index　　<Link href="/destinations">＋ New Route</Link>
+        </div>
+        <h1>Trip Overview</h1>
+        <p>Your current route draft and curated spatial bookmarks.</p>
+        <div className="planner-grid">
+          <article className="panel">
+            <span className="pill">Active Draft　·　8 Days Total</span>
+            <h2>Autumn in Honshu</h2>
+            <p>Dates: Oct 14–22 · 3 Destinations</p>
+            <h3>ITINERARY STOPS</h3>
+            {["Kyoto", "Osaka", "Nara"].map((s, i) => (
+              <div className="stop" key={s}>
+                <i />
+                <div>
+                  <b>{s}</b>
+                  <p>
+                    {
+                      [
+                        "Historic ward corridors, Gion, Arashiyama bamboo path",
+                        "Dotonbori food district, Namba architectural nexus",
+                        "Todai-ji temple, Kasuga Taisha park preserve",
+                      ][i]
+                    }
+                  </p>
+                </div>
+                <code>{["3 nights", "2 nights", "Day trip"][i]}</code>
+              </div>
+            ))}
+            <hr />
+            Tokaido-Sanyo Main Corridor　<Link href="/destinations/kyoto">Edit Schedule →</Link>
+          </article>
+          <div>
+            <article className="panel">
+              <h2>Saved Destination Nodes</h2>
+              <p>3 indexed locations pinned</p>
+              {[destinations[0], destinations[1], destinations[3]].map((d) => (
+                <div className="saved" key={d.slug}>
+                  <MapPin />
+                  <div>
+                    <b>
+                      {d.name}, {d.country}
+                    </b>
+                    <code>
+                      {d.latitude}, {d.longitude}
+                    </code>
+                  </div>
+                  <Link href={`/destinations/${d.slug}`}>Details</Link>
+                </div>
+              ))}
+              <Link href="/destinations">Browse Spatial Bookmarks →</Link>
+            </article>
+            <article className="panel">
+              <h2>
+                <TrainFront size={18} /> Transit & Route Notes
+              </h2>
+              <p>Static synthesis of transit infrastructure across regional links.</p>
+              <div className="notice">
+                JR Kansai W. Pass　 Valid (Days 1–5)
+                <br />
+                Kyoto ↔ Osaka Express　28m via Tokaido Line
+              </div>
+              <small>
+                <Info size={14} /> Luggage forwarding may be available between terminals.
+              </small>
+            </article>
+          </div>
+        </div>
+        <div className="notice">
+          Spatial Topology Index: Clean　·　All geocodes are verified against local catalog
+          definitions.
+        </div>
+      </section>
+    </div>
+  );
+}
